@@ -1,0 +1,1076 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pavithra V | Portfolio</title>
+
+<style>
+
+/* ---------- BASIC ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    background: #ffffff;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- NAVBAR ---------- */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 17px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- HERO ---------- */
+
+#home {
+    min-height: 100vh;
+    padding: 120px 8% 60px;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#typing {
+    border-right: 2px solid black;
+    padding-right: 5px;
+}
+
+.hero-description {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #222;
+    color: white;
+    padding: 13px 25px;
+    margin-right: 10px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #222;
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+
+.hero-image {
+    flex: 0 0 350px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #222;
+
+    animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* ---------- COMMON SECTION ---------- */
+
+section {
+    padding: 90px 8%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    border: 1px solid #ccc;
+    padding: 30px 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.skill h3 {
+    font-size: 21px;
+}
+
+/* ---------- PROJECTS ---------- */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.project p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ---------- CERTIFICATES ---------- */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.certificate {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.certificate img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.certificate h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+/* ---------- EDUCATION ---------- */
+
+.education-box {
+    border-left: 4px solid #222;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #f8f8f8;
+}
+
+.education-box h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.education-box p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* ---------- RESUME ---------- */
+
+.resume {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 45px;
+}
+
+.resume p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-details p {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 17px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    #home {
+        padding-top: 120px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero-image {
+        flex: auto;
+    }
+
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Pavithra V
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#certificates">Certificates</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+<div class="hero">
+
+
+<div class="hero-text">
+
+<p class="small-text">
+Hello, I'm
+</p>
+
+<h1>
+Pavithra V
+</h1>
+
+
+
+<p class="hero-description">
+
+I am a student interested in
+Web Development and Data Analytics.
+I enjoy creating websites, learning
+new technologies and developing
+practical projects.
+
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn">
+View Projects
+</a>
+
+<a href="#contact" class="btn">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<!-- CHANGE profile.jpg TO YOUR PHOTO -->
+
+<img src="IMG-20260805-WA0026.jpg" alt="Pavithra">
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about">
+
+<div class="about-image">
+
+<img src="profile.jpg" alt="Pavithra">
+
+</div>
+
+
+<div class="about-text">
+
+<p>
+Hello! I am Pavithra V.
+I am a student interested in
+Web Development and Data Analytics.
+</p>
+
+<p>
+I enjoy learning new technologies
+and creating practical projects
+that improve my technical and
+problem-solving skills.
+</p>
+
+<p>
+My goal is to continuously improve
+my skills and create useful digital
+solutions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+My Skills
+</h2>
+
+
+<div class="skills-grid">
+
+<div class="skill">
+<h3>HTML</h3>
+</div>
+
+<div class="skill">
+<h3>CSS</h3>
+</div>
+
+<div class="skill">
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill">
+<h3>Bootstrap</h3>
+</div>
+
+<div class="skill">
+<h3>Web Development</h3>
+</div>
+
+<div class="skill">
+<h3>Python</h3>
+</div>
+
+<div class="skill">
+<h3>SQL</h3>
+</div>
+
+<div class="skill">
+<h3>Data Analytics</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+My Projects
+</h2>
+
+
+<div class="projects-grid">
+
+
+<!-- PROJECT 1 -->
+
+<div class="project">
+
+<img src="1000146723 (1).jpg" alt="Project 1">
+
+<div class="project-content">
+
+<h3>
+Portable Underground Utility Scanner
+</h3>
+
+<p>
+A portable project designed to
+identify underground utilities such
+as pipes, cables and metallic objects
+using sensors.
+</p>
+
+<p>
+<strong>Skills:</strong>
+Sensors, Electronics, Embedded Systems
+</p>
+
+<a href="#" class="btn">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+
+<div class="project">
+
+<img src="Screenshot 2026-09-28 112109.png" alt="Project 2">
+
+<div class="project-content">
+
+<h3>
+Web Development Project
+</h3>
+
+<p>
+A responsive website created using
+HTML, CSS, JavaScript and Bootstrap.
+</p>
+
+<p>
+<strong>Skills:</strong>
+HTML, CSS, JavaScript
+</p>
+
+<a href="#" class="btn">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section id="certificates">
+
+<div class="container">
+
+<h2 class="section-title">
+My Certificates
+</h2>
+
+
+<div class="certificates-grid">
+
+
+<div class="certificate">
+
+<img
+src="WhatsApp Image 2026-09-28 at 10.58.33 AM.jpeg"
+alt="Certificate 1"
+onclick="showCertificate(this.src)"
+>
+
+<h3>
+Web Development Certificate
+</h3>
+
+<p>
+Your Organization
+</p>
+
+</div>
+
+
+<div class="certificate">
+
+<img
+src="What 2026-09-28 at 11.01.28 AM.jpeg"
+alt="Certificate 2"
+onclick="showCertificate(this.src)"
+>
+
+<h3>
+Data Analytics Certificate
+</h3>
+
+<p>
+Your Organization
+</p>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">
+Education
+</h2>
+
+
+<div class="education-box">
+
+<h3>
+BE
+</h3>
+
+<p>
+VIVEKANANDHA COLLEGE OF ENGINEERING
+</p>
+
+<p>
+ELECTRONICS AND COMMUNICATION ENGINEERING
+</p>
+
+<p>
+2024 - 2028
+</p>
+
+</div>
+
+
+<div class="education-box">
+
+<h3>
+VIVEKANANDHA COLLEGE OF ENGINEERING,TIRUCHENGODE
+CGPA:8
+</h3>
+
+<p>
+SRI VIVEKANANDA HIGHER SECONDARY SCHOOL, EARVAIPATTINAM
+HSC:74.5%
+SSLC:89.4%
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= RESUME ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Resume
+</h2>
+
+
+<div class="resume">
+
+<p>
+You can download my resume
+to learn more about my education,
+skills, projects and achievements.
+</p>
+
+
+<a
+ src="resume.pdf"
+download
+class="btn">
+
+Download Resume
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+
+<div class="contact">
+
+
+<div class="contact-details">
+
+<p>
+<strong>Email:</strong><br>
+pp2044001@gmail.com
+</p>
+
+<p>
+<strong>Phone:</strong><br>
++91 9444534084
+</p>
+
+<p>
+<strong>Location:</strong><br>
+Tamil Nadu, India
+</p>
+
+<p>
+<strong>LinkedIn:LinkedIn.com/in/pavithra-vijayan-6914ab381</strong><br>
+LinkedIn.com/in/pavithra-vijayan-6914ab381
+</p>
+
+<p>
+<strong>GitHub:</strong><br>
+Your GitHub Profile
+</p>
+
+</div>
+
+
+<div class="contact-form">
+
+<input
+type="text"
+placeholder="Your Name"
+>
+
+<input
+type="email"
+placeholder="Your Email"
+>
+
+<textarea
+placeholder="Your Message"
+></textarea>
+
+<button
+class="btn"
+onclick="sendMessage()">
+
+Send Message
+
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 Pavithra V | Personal Portfolio
+</p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* TYPING EFFECT */
+
+const words = [
+    "Web Developer",
+    "Data Analytics Enthusiast",
+    "Student",
+    "Tech Enthusiast"
+];
+
+let wordIndex = 0;
+let letterIndex = 0;
+
+function typeEffect() {
+
+    let currentWord = words[wordIndex];
+
+    document.getElementById("typing").innerHTML =
+        currentWord.substring(0, letterIndex);
+
+    letterIndex++;
+
+    if (letterIndex > currentWord.length) {
+
+        setTimeout(() => {
+
+            letterIndex = 0;
+
+            wordIndex++;
+
+            if (wordIndex >= words.length) {
+                wordIndex = 0;
+            }
+
+        }, 1000);
+
+    }
+
+    setTimeout(typeEffect, 120);
+}
+
+typeEffect();
+
+
+/* CERTIFICATE */
+
+function showCertificate(image) {
+
+    let newWindow = window.open("");
+
+    newWindow.document.write(
+        "<html><head><title>Certificate</title></head>" +
+        "<body style='margin:0;text-align:center;background:#222;'>" +
+        "<img src='" + image +
+        "' style='max-width:95%;max-height:95vh;margin-top:20px;'>" +
+        "</body></html>"
+    );
+
+}
+
+
+/* CONTACT BUTTON */
+
+function sendMessage() {
+
+    alert(
+        "Thank you! Your message has been received."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
